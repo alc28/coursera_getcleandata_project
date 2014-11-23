@@ -2,28 +2,22 @@
 # run_analaysis.R
 # Adam Chandler
 
-# Load the dplyr library
+# Load the libraries
 library(dplyr)
 library(reshape2)
-
-# Download and unzip the file outside R
-
-# run_analysis.R: 
 
 #The working directory is:
 print('Your working directory is:')
 print(getwd())
 
+# Download and unzip the file outside R
 folder.data <- './UCI HAR Dataset/'
-
-# data: Unzip the the data files
 
 # This script expects the data files will be in child of your repo folder, called:
 print(folder.data)
 # URL for the UCI HAR Dataset files is:
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 # Unzip the data files into the project folder.
-
 
 # IMPORTANT! Are the data files in the right place?
 
@@ -41,7 +35,6 @@ df.allfeatures <- read.table(filepath.features, quote="\"", stringsAsFactors=FAL
 filteredfeatures <- df.allfeatures %>% filter(!is.na(V2)) %>% filter(grepl("-std|-mean", V2))
 # for more stric definition of mean use this filter:
 # filteredfeatures <- df.allfeatures %>% filter(!is.na(V2)) %>% filter(grepl("-std|-mean", V2)) %>% filter(!grepl("-meanFreq", V2))
-
 
 # activities
 filepath.activity_labels <- paste(folder.data, "activity_labels.txt", sep="")
