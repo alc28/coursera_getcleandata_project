@@ -105,7 +105,7 @@ df.combined <- rbind(df.test_wnamedrows, df.train_wnamedrows)
 rm(df.test_wnamedrows)
 rm(df.train_wnamedrows)
 
-write.table(df.combined, "intermediate.txt")
+write.table(df.combined, "intermediate.txt", row.name=FALSE)
 write.csv(df.combined, "intermediate.csv")
 
 #### Tidy up data and cast summary mean file ####
@@ -115,5 +115,5 @@ tidymeans <- dcast(tidymelted, subject + activity ~ variable, mean)
 
 #### Write tidy data file for mean summaries to disk ####
 
-write.table(tidymeans, "tidy.txt")
+write.table(tidymeans, "tidy.txt", row.name=FALSE)
 write.csv(tidymeans, "tidy.csv")
