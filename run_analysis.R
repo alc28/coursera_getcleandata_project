@@ -6,14 +6,9 @@
 library(dplyr)
 library(reshape2)
 
-# Step 0. download and unzip the file outside R
+# Download and unzip the file outside R
 
 # run_analysis.R: 
-# This script assumes that it is in a folder called: project. 
-# Make project the working directory.  
-
-# This script assumes that it is in a folder called: project.
-# Make project the working directory.
 
 #The working directory is:
 print('Your working directory is:')
