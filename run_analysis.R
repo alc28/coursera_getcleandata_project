@@ -14,13 +14,11 @@ library(reshape2)
 print('Your working directory is:')
 print(getwd())
 
-# Is project your working directory into the project working directory?
-
 folder.data <- './UCI HAR Dataset/'
 
 # data: Unzip the the data files
 
-# This script expects the data files will be in child of your project folder called:')
+# This script expects the data files will be in child of your repo folder, called:
 print(folder.data)
 # URL for the UCI HAR Dataset files is:
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
